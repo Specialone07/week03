@@ -1,0 +1,356 @@
+/* Basic Reset */
+body, h1, h2, h3, p, ul, li, span, a, button, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #d9534f; /* Momo Shop Red */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+header .logo {
+    width: 50px; /* Reduced size for better visual comfort */
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #000000; /* Highlight color */
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 20px; /* Adjusted padding for better visual balance */
+    text-align: center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4); /* Dark overlay */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    animation: fadeIn 2s 0.5s ease-out;
+}
+
+.hero .btn {
+    background: #ffeb3b; /* Bright yellow button */
+    color: #d9534f; /* Momo Shop Red */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero .btn:hover {
+    background: #fbc02d; /* Darker yellow */
+}
+
+/* About Us Section */
+.about {
+    padding: 40px 20px; /* Reduced padding for a more compact layout */
+    text-align: center;
+}
+
+.about h2 {
+    color: #d9534f; /* Momo Shop Red */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.about .about-img {
+    width: 80%; /* Smaller image size for better layout */
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-out;
+}
+
+.about p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Menu Section */
+.menu {
+    background: #fff;
+    padding: 60px 20px; /* Increased padding for better balance */
+    text-align: center;
+    position: relative;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 1));
+    z-index: 0;
+    transition: background 0.3s ease;
+}
+
+.menu:hover::before {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+}
+
+.menu h2 {
+    color: #d9534f; /* Momo Shop Red */
+    margin-bottom: 30px;
+    font-size: 2.5em; /* Larger font size for a more striking heading */
+    font-family: 'Roboto', sans-serif; /* Added a stylish font */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 1px; /* Added letter spacing for better readability */
+    position: relative;
+    z-index: 1; /* Ensure it appears above the pseudo-element */
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increased gap for better spacing */
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* Ensure items appear above the pseudo-element */
+}
+
+.menu-item {
+    flex: 1 1 calc(33.333% - 20px); /* Changed to 3 items per row for a better layout */
+    background: #f1f1f1;
+    border-radius: 12px; /* Slightly more rounded corners */
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more prominent effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    overflow: hidden; /* Ensure content does not overflow */
+    position: relative;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    background: #ffe0e0; /* Light pink background on hover */
+}
+
+.menu-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #d9534f; /* Momo Shop Red */
+    transition: width 0.3s ease;
+}
+
+.menu-item:hover::before {
+    width: 100%;
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+    color: #d9534f; /* Momo Shop Red */
+    font-size: 1.6em; /* Larger font size for menu item titles */
+    font-family: 'Roboto', sans-serif; /* Added a stylish font */
+    text-transform: capitalize; /* Capitalize text for better readability */
+}
+
+.menu-item p {
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    font-size: 1em;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #d9534f; /* Momo Shop Red */
+    font-size: 1.2em; /* Slightly larger font for price */
+}
+
+/* Menu Item Image */
+.menu-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* More rounded corners for a softer look */
+    margin-bottom: 15px;
+    max-height: 200px; /* Increased height for better visibility of images */
+    object-fit: cover; /* Ensure images fit properly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for image */
+}
+
+/* Responsive Design for Menu Section */
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 calc(50% - 20px); /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-item {
+        flex: 1 1 100%; /* 1 item per row on mobile screens */
+    }
+
+    .menu h2 {
+        font-size: 2em;
+    }
+
+    .menu-item h3 {
+        font-size: 1.4em;
+    }
+
+    .menu-item p {
+        font-size: 0.9em;
+    }
+
+    .menu-item span {
+        font-size: 1em;
+    }
+}
+
+/* Contact Section */
+.contact {
+    background: #f9f9f9;
+    padding: 40px 20px; /* Adjusted padding for consistency */
+    text-align: center;
+}
+
+.contact h2 {
+    color: #d9534f; /* Momo Shop Red */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact button {
+    background: #d9534f; /* Momo Shop Red */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact button:hover {
+    background: #c62828; /* Darker Red */
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-item {
+        flex: 1 1 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .about .about-img {
+        width: 90%;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

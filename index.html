@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momo Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Momo Shop Logo" class="logo">
+        <h1>Welcome to Momo Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Your Favorite Momo Shop</h2>
+            <p>Freshly made momos just for you!</p>
+            <a href="#menu" class="btn">View Menu</a>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <img src="images/momo.png" alt="Delicious momos served at Momo Shop" class="about-img">
+            <p>At Momo Shop, we serve the best momos in town! Our recipes are crafted with care and love to bring you the most delicious and authentic momos you’ve ever tasted. Join us for a delightful dining experience.</p>
+        </section>
+
+        <section id="menu" class="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/momo.png" alt="Vegetarian Momos" class="menu-img">
+                    <h3>Vegetarian Momos</h3>
+                    <p>Delicious steamed momos filled with fresh vegetables and aromatic spices.</p>
+                    <span>$5.99</span>
+                </div>
+                <div class="menu-item">
+                    <img src="images/momo.png" alt="Chicken Momos" class="menu-img">
+                    <h3>Chicken Momos</h3>
+                    <p>Juicy chicken momos with a hint of ginger and garlic.</p>
+                    <span>$6.99</span>
+                </div>
+                <div class="menu-item">
+                    <img src="images/momo.png" alt="Pork Momos" class="menu-img">
+                    <h3>Pork Momos</h3>
+                    <p>Spicy pork momos made with a blend of traditional spices.</p>
+                    <span>$7.99</span>
+                </div>
+                <div class="menu-item">
+                    <img src="images/momo.png" alt="Buff Momo" class="menu-img">
+                    <h3>Buff Momo</h3>
+                    <p>Tender buff momos with a savory filling.</p>
+                    <span>$8.99</span>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 dome Momo Shop. All rights reserved.</p>
+        <p>123 Momo Street, Baneshor, Blues 45678</p>
+    </footer>
+</body>
+</html>
