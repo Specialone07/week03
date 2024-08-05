@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetarian Momos - Momo Shop</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, p, span, a {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background: #d9534f; /* Momo Shop Red */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        header .logo {
+            width: 50px; /* Reduced size for better visual comfort */
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #000000; /* Highlight color */
+        }
+
+        /* Main Section Styles */
+        main {
+            padding: 20px;
+        }
+
+        .product-detail {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .product-detail h2 {
+            color: #d9534f; /* Momo Shop Red */
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .product-detail .product-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-detail p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .product-detail span {
+            display: block;
+            font-weight: bold;
+            color: #d9534f; /* Momo Shop Red */
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .product-detail .btn {
+            background: #d9534f; /* Momo Shop Red */
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-detail .btn:hover {
+            background: #c62828; /* Darker Red */
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-detail h2 {
+                font-size: 2em;
+            }
+
+            .product-detail p {
+                font-size: 1em;
+            }
+
+            .product-detail span {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Momo Shop Logo" class="logo">
+        <h1>Vegetarian Momos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#menu">Menu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-detail">
+            <h2>Chicken Momos</h2>
+            <img src="images/momo.png" alt="Vegetarian Momos" class="product-img">
+            <p>Delicious steamed momos filled with fresh vegetables and aromatic spices. Perfect for a light and healthy meal.</p>
+            <span>$9.99</span>
+            <a href="#" class="btn">Add to Cart</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Momo Shop. All rights reserved.</p>
+        <p>123 Momo Street, Baneshor, Blues 45678</p>
+    </footer>
+</body>
+</html>

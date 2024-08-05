@@ -354,3 +354,73 @@ footer {
     from { transform: scale(0.95); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+/* Product Detail Page Styles */
+.product-detail {
+    padding: 40px 20px;
+    text-align: center;
+    background: #fff;
+}
+
+.product-detail h2 {
+    color: #d9534f; /* Momo Shop Red */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+.product-detail .product-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-detail p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.product-detail span {
+    display: block;
+    font-weight: bold;
+    color: #d9534f; /* Momo Shop Red */
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.product-detail .btn {
+    background: #d9534f; /* Momo Shop Red */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-detail .btn:hover {
+    background: #c62828; /* Darker Red */
+}
+
+/* Responsive Design for Product Detail Page */
+@media (max-width: 768px) {
+    .product-detail h2 {
+        font-size: 2em;
+    }
+
+    .product-detail p {
+        font-size: 1em;
+    }
+
+    .product-detail span {
+        font-size: 1.2em;
+    }
+}
+
