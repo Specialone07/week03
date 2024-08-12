@@ -4,90 +4,131 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Momo Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Your custom styles -->
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Momo Shop Logo" class="logo">
-        <h1>Welcome to Momo Shop</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#menu">Menu</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Momo Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <h2>Your Favorite Momo Shop</h2>
-            <p>Freshly made momos just for you!</p>
-            <a href="#menu" class="btn">View Menu</a>
+        <section id="home" class="hero text-center bg-light p-5">
+            <div class="container">
+                <h2>Your Favorite Momo Shop</h2>
+                <p class="lead">Freshly made momos just for you!</p>
+                <a href="menu.html" class="btn btn-primary">View Menu</a>
+            </div>
         </section>
 
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <img src="images/momo.png" alt="Delicious momos served at Momo Shop" class="about-img">
-            <p>At Momo Shop, we serve the best momos in town! Our recipes are crafted with care and love to bring you the most delicious and authentic momos you’ve ever tasted. Join us for a delightful dining experience.</p>
+        <section id="about" class="about py-5">
+            <div class="container text-center">
+                <h2>About Us</h2>
+                <img src="images/momo.png" alt="Delicious momos served at Momo Shop" class="img-fluid mb-4">
+                <p>At Momo Shop, we serve the best momos in town! Our recipes are crafted with care and love to bring you the most delicious and authentic momos you’ve ever tasted. Join us for a delightful dining experience.</p>
+            </div>
         </section>
 
-        <section id="menu" class="menu">
-            <h2>Our Menu</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <a href="vegmomo.html">
-                        <img src="images/momo.png" alt="Vegetarian Momos" class="menu-img">
-                        <h3>Vegetarian Momos</h3>
-                        <p>Delicious steamed momos filled with fresh vegetables and aromatic spices.</p>
-                        <span>$5.99</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="cmomo.html">
-                        <img src="images/momo.png" alt="Chicken Momos" class="menu-img">
-                        <h3>Chicken Momos</h3>
-                        <p>Juicy chicken momos with a hint of ginger and garlic.</p>
-                        <span>$6.99</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="porkmomo.html">
-                        <img src="images/momo.png" alt="Pork Momos" class="menu-img">
-                        <h3>Pork Momos</h3>
-                        <p>Spicy pork momos made with a blend of traditional spices.</p>
-                        <span>$7.99</span>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="buffmomo.html">
-                        <img src="images/momo.png" alt="Buff Momo" class="menu-img">
-                        <h3>Buff Momo</h3>
-                        <p>Tender buff momos with a savory filling.</p>
-                        <span>$8.99</span>
-                    </a>
+        <section id="menu" class="menu py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center">Our Menu</h2>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <a href="vegmomo.html">
+                                <img src="images/momo.png" alt="Vegetarian Momos" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Vegetarian Momos</h3>
+                                    <p class="card-text">Delicious steamed momos filled with fresh vegetables.</p>
+                                    <span class="card-price">$5.99</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <a href="cmomo.html">
+                                <img src="images/momo.png" alt="Chicken Momos" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Chicken Momos</h3>
+                                    <p class="card-text">Juicy chicken momos with a hint of ginger and garlic.</p>
+                                    <span class="card-price">$6.99</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <a href="porkmomo.html">
+                                <img src="images/momo.png" alt="Pork Momos" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Pork Momos</h3>
+                                    <p class="card-text">Spicy pork momos made with a blend of traditional spices.</p>
+                                    <span class="card-price">$7.99</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="card">
+                            <a href="buffmomo.html">
+                                <img src="images/momo.png" alt="Buff Momos" class="card-img-top">
+                                <div class="card-body text-center">
+                                    <h3 class="card-title">Buff Momos</h3>
+                                    <p class="card-text">Tender buff momos with a savory filling.</p>
+                                    <span class="card-price">$8.99</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+
+        <section id="contact" class="contact py-5">
+            <div class="container">
+                <h2 class="text-center">Contact Us</h2>
+                <form action="#" method="post" class="w-50 mx-auto">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 dome Momo Shop. All rights reserved.</p>
-        <p>123 Momo Street, Baneshor, Blues 45678</p>
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Dome Momo Shop. All rights reserved.</p>
+            <p>123 Momo Street, Baneshor, Blues 45678</p>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
