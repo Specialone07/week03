@@ -4,34 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vegetarian Momos - Momo Shop</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Basic Reset */
-        body, h1, h2, p, span, a {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Page Styles */
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             background-color: #f4f4f4;
-            color: #333;
         }
 
-        /* Header Styles */
         header {
-            background: #d9534f; /* Momo Shop Red */
+            background: #d9534f;
             color: #fff;
             padding: 20px 0;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
         }
 
         header .logo {
-            width: 50px; /* Reduced size for better visual comfort */
+            width: 50px;
             height: 50px;
             margin-bottom: 10px;
         }
@@ -41,118 +31,45 @@
             font-size: 2.5em;
         }
 
-        header nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        header nav ul li {
-            display: inline;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        header nav ul li a:hover {
-            color: #000000; /* Highlight color */
-        }
-
-        /* Main Section Styles */
-        main {
-            padding: 20px;
-        }
-
-        .product-detail {
-            padding: 40px 20px;
-            text-align: center;
-            background: #fff;
-        }
-
-        .product-detail h2 {
-            color: #d9534f; /* Momo Shop Red */
-            margin-bottom: 20px;
-            font-size: 2.5em;
-        }
-
-        .product-detail .product-img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            max-width: 500px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .product-detail p {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .product-detail span {
-            display: block;
-            font-weight: bold;
-            color: #d9534f; /* Momo Shop Red */
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-
-        .product-detail .btn {
-            background: #d9534f; /* Momo Shop Red */
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1em;
-            text-decoration: none;
-            display: inline-block;
-            transition: background 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .product-detail .btn:hover {
-            background: #c62828; /* Darker Red */
-        }
-
-        /* Footer Styles */
         footer {
             background: #222;
             color: #fff;
             text-align: center;
             padding: 15px;
-            position: relative;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .product-detail h2 {
-                font-size: 2em;
-            }
+        .product-detail img {
+            max-width: 500px;
+        }
 
-            .product-detail p {
-                font-size: 1em;
-            }
+        .registration-form {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 600px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
 
-            .product-detail span {
-                font-size: 1.2em;
-            }
+        .registration-form h2 {
+            margin-bottom: 20px;
+            color: #d9534f;
+        }
+
+        .btn-primary {
+            background-color: #d9534f;
+            border-color: #d9534f;
+        }
+
+        .btn-primary:hover {
+            background-color: #c62828;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="images/logo.png" alt="Momo Shop Logo" class="logo">
-        <h1>Veg Momos</h1>
+        <h1>Vegetarian Momos</h1>
         <nav>
             <ul>
                 <li><a href="index.html#home">Home</a></li>
@@ -164,12 +81,40 @@
     </header>
 
     <main>
-        <section class="product-detail">
+        <section class="product-detail text-center">
             <h2>Vegetarian Momos</h2>
-            <img src="images/momo.png" alt="Vegetarian Momos" class="product-img">
+            <img src="images/momo.png" alt="Vegetarian Momos" class="img-fluid rounded">
             <p>Delicious steamed momos filled with fresh vegetables and aromatic spices. Perfect for a light and healthy meal.</p>
-            <span>$5.99</span>
-            <a href="#" class="btn">Add to Cart</a>
+            <span class="h4 text-danger">$5.99</span>
+            <br>
+            <a href="#" class="btn btn-danger mt-3">Add to Cart</a>
+        </section>
+
+        <section class="registration-form container mt-5">
+            <h2 class="text-center">Register for Updates</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments" class="form-control" placeholder="Any comments or requests" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
         </section>
     </main>
 
@@ -177,5 +122,10 @@
         <p>&copy; 2024 Momo Shop. All rights reserved.</p>
         <p>123 Momo Street, Baneshor, Blues 45678</p>
     </footer>
+
+    <!-- Include Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
